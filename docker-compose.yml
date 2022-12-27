@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  api:
+    build: .
+    restart: always
+    image: beratuyanik/gulsahcoskun-api:0.0.1
+    platform: linux/amd64
+    command: >
+      bash -c "python /Backend/manage.py makemigrations &&
+       python /Backend/manage.py migrate &&
+        echo yes | python /Backend/manage.py collectstatic &&
+         python /Backend/manage.py runserver 0.0.0.0:7000"
+    environment:
+      DB_HOST : 'db'
+      DB_NAME : 'gulsahcoskun.com'
+      DB_USER : 'gulsah'
+      DB_PASS : 'gulsahcoskun.com'
+    ports:
+      - "7000:7000"
+    volumes:
+      - .:/app/
