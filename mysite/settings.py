@@ -36,13 +36,14 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'http://localhost:8000',
+    'http://localhost:4000',
+    'http://localhost:7000',
     'http://api.gulsahcoskun.com',
     'https://api.gulsahcoskun.com',
     'http://gulsahcoskun.com',
     'https://gulsahcoskun.com',
 ]
+
 
 GRAPHENE = {
     "SCHEMA": "mysite.schema.schema"
