@@ -42,6 +42,8 @@ CORS_ALLOWED_ORIGINS = [
     'https://api.gulsahcoskun.com',
     'http://gulsahcoskun.com',
     'https://gulsahcoskun.com',
+    'http://www.gulsahcoskun.com',
+    'https://www.gulsahcoskun.com',
 ]
 
 
